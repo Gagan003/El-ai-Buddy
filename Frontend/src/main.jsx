@@ -5,6 +5,13 @@ import './App.css'
 import { Provider } from 'react-redux'
 import store from './store/store.js'
 
+// --- ADD THIS ---
+import axios from 'axios'
+
+// Make axios send cookies with every request (important for auth)
+axios.defaults.withCredentials = true
+// --- END ADDITION ---
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
